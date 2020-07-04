@@ -4,9 +4,6 @@ import contextlib
 import discord
 from discord.ext import commands
 
-from core import checks
-from core.models import PermissionLevel
-
 @commands.command()
 @checks.has_permissions(PermissionLevel.OWNER)
 async def help(ctx):

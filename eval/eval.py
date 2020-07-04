@@ -35,7 +35,7 @@ class eval(commands.Cog):
             if isinstance(body[-1], ast.AsyncWith):
                 insert_returns(body[-1].body)
 
-@commands.command()
+@commands.command([aliases=["eval", "e"])
 @checks.has_permissions(PermissionLevel.OWNER)
 async def eval_stmts(stmts, env=None):
     """
